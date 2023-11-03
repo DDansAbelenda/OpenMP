@@ -1,7 +1,7 @@
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define N 1024
+#define N 1048
 
 int main(int argc, char *argv[])
 {
