@@ -25,4 +25,5 @@ int main(int argc, char *argv[])
       printf("tid= %d i= %d c[i]= %f\n", tid, i, c[i]);
     }
   /* end of parallel for construct */
+  return 0;
 }

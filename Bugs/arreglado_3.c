@@ -6,10 +6,15 @@
 int main(int argc, char *argv[])
 {
     int nthreads, tid, i, j;
-    float a[N][N];
 
+    // Reservar memoria dinámicamente
+    double **a = (double **)malloc(N * sizeof(double *));
+    for (int i = 0; i < N; i++)
+    {
+        a[i] = (double *)malloc(N * sizeof(double));
+    }
 /* Fork a team of threads with explicit variable scoping */
-#pragma omp parallel shared(nthreads, i, j, a) private(tid)
+#pragma omp parallel shared(nthreads) private(i,j,tid)
     {
 
         /* Obtain/print thread info */
