@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     if (argc != 3)
     {
-        printf("Son exactamente 2 parámetros: tamaño del arreglo y cantidad de hilos\n");
+        printf("Son exactamente 2 parámetros: dimensión N y cantidad de hilos\n");
         return 1;
     }
 
