@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
     #pragma omp barrier
 
 /* do some work */
+// Se elimina la inicialización de la variable total
     #pragma omp for schedule(dynamic, 10)
     for (i = 0; i < 1000000; i++)
     {

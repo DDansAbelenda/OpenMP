@@ -7,17 +7,15 @@ int main(int argc, char *argv[])
 {
     int nthreads, tid, i, j;
 
-    // Reservar memoria dinámicamente
+    // Reservar memoria dinámicamente para resolver el problema de segmentación
     double **a = (double **)malloc(N * sizeof(double *));
     for (int i = 0; i < N; i++)
     {
         a[i] = (double *)malloc(N * sizeof(double));
     }
 /* Fork a team of threads with explicit variable scoping */
-#pragma omp parallel shared(nthreads) private(i,j,tid)
-    {
-
-        /* Obtain/print thread info */
+#pragma omp parallel shared(nthreads) private(i, j, tid)
+    { /* Obtain/print thread info */
         tid = omp_get_thread_num();
         if (tid == 0)
         {
