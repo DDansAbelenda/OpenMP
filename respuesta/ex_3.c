@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
     clock_t s_end = clock();
     time_spent += (double)(s_end - begin) / CLOCKS_PER_SEC;
 
-    printf("Paralelo\n");
+    printf("Secuencial\n");
     printf("Tiempo de ejecución: %f\n", time_spent);
     
     // Liberar memoria
