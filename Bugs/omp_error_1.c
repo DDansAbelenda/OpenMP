@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 #pragma omp parallel for shared(a, b, c, chunk) private(i, tid) schedule(static, chunk)
   {
    // tid = omp_get_thread_num();
-   // la directiva omp parallel for solo debe ser precedida por un ciclon for
+   // la directiva omp parallel for solo debe ser precedida por un ciclo for
     for (i = 0; i < N; i++)
     {
       tid = omp_get_thread_num(); // es innecesario su uso en cada iteración
