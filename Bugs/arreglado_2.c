@@ -35,5 +35,7 @@ int main(int argc, char *argv[])
     }
     printf("Thread %d is done! Total= %e\n", tid, total);
 
-  } /*** End of parallel region ***/
+  } 
+  /*** End of parallel region ***/
+  return 0;
 }

@@ -35,4 +35,6 @@ int main(int argc, char *argv[])
         /* For confirmation */
         printf("Thread %d done. Last element= %f\n", tid, a[N - 1][N - 1]);
     } /* All threads join master thread and disband */
+
+    return 0;
 }
