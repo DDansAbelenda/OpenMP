@@ -10,4 +10,4 @@
 #SBATCH --mem-per-cpu=4GB # Request 4GB RAM per core
 #SBATCH --mail-type=BEGIN,END,FAIL,ALL # Notificacion por email
 #SBATCH --mail-user=ddans@uclv.cu # email a notificar
-./ex_2 1000 8
+./ex_3 10000 8

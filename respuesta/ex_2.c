@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 
     size = atoi(argv[1]);
     nthreads = atoi(argv[2]);
+
+    printf("Tamaño del vector: %d\nCantidad de hilos:%d\n\n", size, nthreads);
     omp_set_num_threads(nthreads);
 
     int *vector = (int *)malloc(sizeof(int) * size);

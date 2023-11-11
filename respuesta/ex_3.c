@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
 
     N = atoi(argv[1]);
     nthreads = atoi(argv[2]);
+    printf("Dimensión de la matriz: %d\nCantidad de hilos:%d\n\n", N, nthreads);
+
     omp_set_num_threads(nthreads);
 
     // Pidiendo memoria para los vectores a y c, y la matriz B
