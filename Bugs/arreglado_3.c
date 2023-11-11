@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         a[i] = (double *)malloc(N * sizeof(double));
     }
 /* Fork a team of threads with explicit variable scoping */
-#pragma omp parallel shared(nthreads) private(i, j, tid)
+#pragma omp parallel shared(nthreads, a) private(i, j, tid)
     { /* Obtain/print thread info */
         tid = omp_get_thread_num();
         if (tid == 0)
@@ -25,10 +25,11 @@ int main(int argc, char *argv[])
         printf("Thread %d starting...\n", tid);
 
 /* Each thread works on its own private copy of the array */
-#pragma omp for
+
         for (i = 0; i < N; i++)
         {
             for (j = 0; j < N; j++)
+            #pragma omp critical
                 a[i][j] = tid + i + j;
         }
         /* For confirmation */
