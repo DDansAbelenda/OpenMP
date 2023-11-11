@@ -76,6 +76,11 @@ int main(int argc, char *argv[])
     printf("Secuencial\n");
     printf("Tiempo de ejecución: %f\n", time_spent);
     
+    //Speedup
+    printf("------------------------\n");  
+    printf("Speedup: %.4f\n", (time_spent / time));
+    
+
     // Liberar memoria
     free(B);
     free(c);

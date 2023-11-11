@@ -61,6 +61,13 @@ int main(int argc, char *argv[])
     printf("Serie\n");
     printf("Tiempo de ejecución: %f\n", time_spent);
     printf("Promedio: %f\n", l_mean);
+    
+    //Speedup
+    printf("------------------------\n");  
+    printf("Speedup: %.4f\n", (time_spent / time));
+    
+    
+
     // Liberar memoria
     free(vector);
 
